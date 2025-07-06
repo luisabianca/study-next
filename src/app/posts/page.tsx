@@ -1,4 +1,4 @@
-import PostsFetch from "@/components/postsFetch";
+import PostsFetch from "@/api/postsFetch";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

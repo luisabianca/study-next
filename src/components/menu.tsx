@@ -21,6 +21,9 @@ export default function Menu() {
       <li>
         <Link href="/posts">Posts</Link>
       </li>
+      <li>
+        <Link href="/cursos">Cursos</Link>
+      </li>
     </ul>
   )
 }

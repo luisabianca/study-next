@@ -1,4 +1,4 @@
-import ClientFetch from "@/components/clientFetch";
+import ClientFetch from "@/api/clientFetch";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
