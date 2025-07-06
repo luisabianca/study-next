@@ -24,6 +24,9 @@ export default function Menu() {
       <li>
         <Link href="/cursos">Cursos</Link>
       </li>
+      <li>
+        <Link href="/acoes">Açoes</Link>
+      </li>
     </ul>
   )
 }
