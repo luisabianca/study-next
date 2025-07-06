@@ -1,4 +1,4 @@
-import ClientFetch from "@/api/clientFetch";
+import ClientFetch from "@/app/api/clientFetch";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

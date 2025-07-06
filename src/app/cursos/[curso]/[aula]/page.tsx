@@ -1,4 +1,4 @@
-import { getAula } from "@/api/cursos";
+import { getAula } from "@/app/api/cursos";
 import { Metadata } from "next";
 import Link from "next/link";
 
