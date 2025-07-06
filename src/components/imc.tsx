@@ -3,9 +3,9 @@
 import { useState } from "react"
 
 export default function Imc() {
-  const [altura, setAltura] = useState(0)
-  const [peso, setPeso] = useState(0)
-  const [imc, setImc] = useState(0)
+  const [altura, setAltura] = useState('')
+  const [peso, setPeso] = useState('')
+  const [imc, setImc] = useState('')
 
   const classificarIMC = (valor: number) => {
     if (valor < 18.5) return "Abaixo do peso";
@@ -15,10 +15,13 @@ export default function Imc() {
   };
 
   const handleClick = () => {
-    if(altura > 0) {
-      setImc(peso / (altura * altura))
+    const alturaNum = Number(altura);
+    const pesoNum = Number(peso);
+    const total = (pesoNum / (alturaNum * alturaNum)).toFixed(2)
+    if(alturaNum && pesoNum) {
+      setImc(total)
     } else {
-      alert("Por favor, insira uma altura válida.");
+      alert("Por favor, insira um valor válido.");
     }
   }
 
@@ -26,13 +29,13 @@ export default function Imc() {
     <main>
       <h1>Calculadora de IMC</h1>
       <label htmlFor="altura">Altura</label>
-      <input type="number" name="altura" id="altura" step="0.01" onChange={(e) => setAltura(Number(e.target.value))} required/>
+      <input type="number" name="altura" id="altura" step="0.01" value={altura} onChange={(e) => setAltura(e.target.value)} required/>
       <label htmlFor="peso">Peso</label>
-      <input type="number" name="peso" id="peso" onChange={(e) => setPeso(Number(e.target.value))} required/>
+      <input type="number" name="peso" id="peso" value={peso} onChange={(e) => setPeso(e.target.value)} required/>
       <button onClick={handleClick}>Calcular</button>
 
       <div className="result">
-        {imc > 0 && <p>Seu IMC é: {imc.toFixed(2)} - {classificarIMC(imc)}</p>}
+        {imc && <p>Seu IMC é: {imc} - {classificarIMC(Number(imc))}</p>}
       </div>
     </main>
   )
