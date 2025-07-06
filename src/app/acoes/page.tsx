@@ -20,7 +20,6 @@ export const metadata: Metadata = {
 export default async function Acoes() {
   const response = await fetch('https://api.origamid.online/acoes');
   const data = await response.json() as Acoestype[];
-  console.log(data)
 
   return (
     <main>

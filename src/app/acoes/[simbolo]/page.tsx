@@ -30,8 +30,6 @@ export default async function Acao({params}: ParamsType) {
     } });
   const data = await response.json() as AcaoType;
 
-  console.log(data)
-
   return (
     <main>
       <Link href={'/acoes'}>Voltar</Link>

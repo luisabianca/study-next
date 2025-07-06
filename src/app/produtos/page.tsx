@@ -1,4 +1,4 @@
-import ServerFetch from "@/app/api/serverFetch";
+import {ServerFetch} from "@/app/api/serverFetch";
 
 export default function Produtos() {
   return (
