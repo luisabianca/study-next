@@ -1,3 +1,4 @@
+import ClientFetch from "@/components/clientFetch";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export default function About() {
   return (
     <main>
       <h1>About</h1>
+       <ClientFetch />
     </main>
   );
 }
