@@ -17,6 +17,7 @@ export default async function CursoPage({params}: CursoType) {
   const curso = await getCurso(params.curso);
   return (
     <main>
+      <Link href='/cursos'>Voltar</Link>
       <h1>{curso.nome}</h1>
       <p>{curso.descricao}</p>
       <p>Total Horas: {curso.total_horas}</p>
