@@ -19,7 +19,9 @@ export default async function Menu() {
     }
   })
   if(response.ok) {
-    conta = await response.json() as Conta
+    conta = await response.json() as Conta;
+  } else {
+    console.log('Erro ao buscar perfil');
   }
 
   return (
